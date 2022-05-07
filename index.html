@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfinityManga</title>
+
+
+
+    <style>
+        body {
+            font-family: comfortaa light;
+            text-align: center;
+            background-image: linear-gradient(290deg, rgb(99, 46, 99), rgb(0, 0, 0));
+        }
+        
+        .text-focus-in {
+            -webkit-animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                    animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+        
+        @-webkit-keyframes text-focus-in {
+            0% {
+              -webkit-filter: blur(12px);
+                      filter: blur(12px);
+              opacity: 0;
+              color:white;
+            }
+            100% {
+              -webkit-filter: blur(0px);
+                      filter: blur(0px);
+              opacity: 1;
+              color:white;
+            }
+        }
+        @keyframes text-focus-in {
+            0% {
+              -webkit-filter: blur(12px);
+                      filter: blur(12px);
+              opacity: 0;
+              color:white;
+            }
+            100% {
+              -webkit-filter: blur(0px);
+                      filter: blur(0px);
+              opacity: 1;
+              color:white;
+            }
+        }
+          
+          
+          
+        .tracking-in-contract {
+            -webkit-animation: tracking-in-contract 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                    animation: tracking-in-contract 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+
+        @-webkit-keyframes tracking-in-contract {
+            0% {
+              letter-spacing: 1em;
+              opacity: 0;
+              color:white;
+              font-size: 50px;
+            }
+            40% {
+              opacity: 0.6;
+              color:white;
+              font-size: 50px;
+            }
+            100% {
+              letter-spacing: normal;
+              opacity: 1;
+              color:white;
+              font-size: 50px;
+            }
+          }
+          @keyframes tracking-in-contract {
+            0% {
+              letter-spacing: 1em;
+              opacity: 0;
+              color:white;
+              font-size: 50px;
+            }
+            40% {
+              opacity: 0.6;
+              color:white;
+              font-size: 50px;
+            }
+            100% {
+              letter-spacing: normal;
+              opacity: 1;
+              color:white;
+              font-size: 50px;
+            }
+          }
+          
+        .color-change-2x {
+            -webkit-animation: color-change-2x 2s linear infinite alternate both;
+                    animation: color-change-2x 2s linear infinite alternate both;
+        }
+
+        @-webkit-keyframes color-change-2x {
+            0% {
+              background: #990000;
+            }
+            100% {
+              background: #a200ff;
+            }
+          }
+        @keyframes color-change-2x {
+            0% {
+              background: #740000;
+            }
+            100% {
+              background: #a200ffa6;
+            }
+        }
+        
+        .css-input {
+            padding: 5px;
+            font-size: 17px;
+            border-width: 4px;
+            border-color: #000000;
+            background-color: transparent;
+            color: #000000;
+            border-style: inset;
+            border-radius: 38px;
+            box-shadow: 0px 0px 6px rgba(66,66,66,.29);
+            text-align: center;
+            font-family: comfortaa light;
+       }
+        .css-input:focus {
+            outline:none;
+       }
+
+    </style>
+
+
+
+
+
+    <!------------------------serachbar script------------------------>
+
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        function scrollHandler() {
+            var element = document.getElementById('header');
+
+            var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+            var elementHeight = element.offsetHeight;
+            var scrollTop = document.documentElement.scrollTop;
+            var opacity = 1;
+
+            if (scrollTop > distanceToTop) {
+
+                opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+
+            }
+
+            if (opacity >= 0) {
+
+                element.style.opacity = opacity;
+
+            }
+        }
+        window.addEventListener('scroll', scrollHandler);
+    </script>
+    <!------------------------------------------------------------------>
+
+
+
+</head>
+
+
+
+
+
+
+
+
+<body class="color-change-2x">
+    <div class="main_body">
+        <br><br><br><br>
+
+        
+
+        <h1 class="tracking-in-contract"><center>ANIMEFEX</center></h1>
+        <h3 class="text-focus-in"><center>Dive into the world of Anime</center></h3>
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+        <div class="searchbar">
+
+
+
+            <input type="text" class="css-input" id="myInput" onkeyup="myFunction()" placeholder="Search Your Anime...">
+
+
+
+            <ul id="myUL">
+                <li><a href="#" style="text-decoration: none; color:rgb(255, 255, 255)">Takt op. Destiny</a></li>
+                &nbsp;
+                <li><a href="#" style="text-decoration: none; color:rgb(255, 255, 255)">ManGirl</a></li>
+                &nbsp;
+                <li><a href="#" style="text-decoration: none; color:rgb(255, 255, 255)">Tokyo Ghoul</a></li>
+            </ul>
+
+
+        </div>
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+        <div class=""></div>
+
+        <footer>&copy; 2022 By Infinity Manga</footer>
+    </div>
+
+</body>
+
+</html>
